@@ -33,9 +33,8 @@ body{
 }
 
 h1{
-    max-width: 600px;
-    padding: 0 20px;
     margin: auto;
+    text-align: center;
     font-size: 55px;
 }
 h2{
@@ -59,6 +58,10 @@ header{
     height: 750px;
     /* background-repeat: no-repeat;
     background-position: center; */
+}
+header h1{
+    max-width: 600px;
+    padding: 0 20px;
 }
 .email-title{
    padding: 150px 0;
@@ -99,9 +102,9 @@ select{
     background-color: transparent;
     color: #fff;
     border: 1px solid #fff;
-    -webkit-appearance:none; /*For hiding default pointer of drop-down on Chrome*/
+    -webkit-appearance:none;/* For hiding default pointer of drop-down on Chrome */
     -moz-appearance:none;
-    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='34' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    /* background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='34' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>"); */
     background-repeat: no-repeat;
     background-position-x: 100%;
 }
@@ -124,7 +127,7 @@ select{
     padding: 75px 0;
 }
 .email-title-container{
-    margin: 20px auto;
+    margin: 20px auto 0 auto;
 }
 .email-title-container button{
     font-size: 20px;
@@ -142,10 +145,10 @@ select{
     width: 214px;
 }
 
-.enjoy-on-your-tv, .download-your-shows, .watch-everywhere{
+.enjoy-on-your-tv, .download-your-shows, .watch-everywhere, .create-profiles, .frequently-asked-questions, footer{
     padding: 50px 45px;
 }
-.enjoy-on-your-tv-container, .download-your-shows-container, .watch-everywhere-container, .create-profiles-for{
+.enjoy-on-your-tv-container, .download-your-shows-container, .watch-everywhere-container, .create-profiles-container{
     /* background-color: turquoise; */
     max-width: 1100px;
     margin: 0 auto;
@@ -229,4 +232,107 @@ select{
 }
 .stranger-things-info p{
     font-size: 15px;
+}
+
+
+
+.accordion{
+    padding: 50px 0;
+    margin: auto;
+    width: 75%;
+    font-size: 25px;
+}
+.accordion-item{
+    margin-bottom: 10px;
+}
+.accordion-item-header{
+    line-height: 70px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+}
+.accordion-item-header::after{
+    content: "\002B";
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    transition: 0.3s ease-in-out;
+}
+.accordion-item-header.active::after{
+    transform: rotate(45deg);
+}
+.accordion-item-body{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+.accordion-item-body-content{
+    padding: 20px;
+}
+.accordion-item-header.active + .accordion-item-body{
+    max-height: 600px;
+}
+
+
+.footer-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: left;
+}
+.footer-top{
+    padding: 0;
+    margin: 0 0 30px 0;
+    font-size: 18px;
+}
+.footer-links{
+    width: 100%;
+}
+.footer-link-item{
+    margin-right: 0;
+    font-size: 14px;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 25%;
+    min-width: 100px;
+    margin-bottom: 15px;
+    /* padding-right: 12px; */
+    vertical-align: top;
+}
+.footer-link-item a{
+    color: #999;
+    text-decoration: none;
+}
+.footer-bottom .lang-selector{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    height: 100px;
+}
+footer .lang-selector div{
+    position: relative;
+}
+footer .lang-selector div i{
+    position: absolute;
+    color: #999;
+    left: 8px;
+}
+
+footer .lang-selector select{
+    height: 60px;
+    width: 135px;
+    padding-left:45px ;
+    margin-left: -7px;
+    background-color: transparent;
+    color: #999;
+    border: 1px solid #999;
+    border-radius: 4px;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='grey' height='60' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    /* background-position-x: 100%; */
+}
+.footer-bottom p{
+    font-size: 16px;
 }
